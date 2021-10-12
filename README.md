@@ -9,9 +9,15 @@ https://blog.openmined.org/how-to-setup-pysyft-on-windows-10/
 ## For Windows users:
 
 Enable WSL in you system and install Ubuntu distro 
-from Windows store. 
+from Windows store.
 
-## Configuring environment for runnig the project
+OR
+
+Follow the next installation tutorial https://blog.openmined.org/install/  
+
+## Configuring environment for running the project
+
+
 
 ### 1. Anaconda setup
 - **Dowload Anaconda distro**
@@ -53,7 +59,7 @@ from Windows store.
 
     To install PySyft run the following command:
 
-    > $ pip install syft==0.5.0rc1
+    > $ pip install syft==0.5.0
 
     git: https://github.com/OpenMined/PySyft
 
@@ -74,7 +80,7 @@ from Windows store.
 - **Install SyMPC**
     To install SyMPC run the following command:
 
-    > $ pip install git+https://github.com/OpenMined/SyMPC@0.5.0
+    > $ pip install git+https://github.com/OpenMined/SyMPC@main
 
     Experiments with SyMPC should work with 0.5.0rc1 version of Syft, and exactly 1.8.0 version of torch (got an error with 1.8.1 version of torch)
 
