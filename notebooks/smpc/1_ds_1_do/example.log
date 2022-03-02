@@ -15,3 +15,4 @@
 [2021-05-13T15:49:23.579022+0200][ERROR][logger]][3543] You do not have permission to .get() Object with ID: <UID: c0ebd6f4b7f04857a9d3c96c9108c9ed>Please submit a request.
 [2021-05-13T15:49:23.586790+0200][CRITICAL][logger]][3543] You do not have permission to .get() Object with ID: <UID: c0ebd6f4b7f04857a9d3c96c9108c9ed>Please submit a request.
 [2021-06-18T12:36:09.035187+0200][CRITICAL][logger]][453] 'More than one item with tag:#test_tensor_1'
+[2022-02-23T15:06:40.701376+0100][CRITICAL][logger]][14288] The session b5e960fe-358a-4f08-963c-e3862efcfa8c could not be found

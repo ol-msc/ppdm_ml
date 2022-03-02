@@ -1,0 +1,38 @@
+FROM continuumio/anaconda3
+
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt-get update && \
+    apt-get upgrade -y && \
+    apt-get clean && \
+    apt-get install -y --no-install-recommends \
+         git \
+         curl \
+	     vim \
+         python3-pip \
+         build-essential \
+         python3-dev \
+         python3-wheel
+
+WORKDIR /ppdm/
+RUN conda init bash
+
+# Create conda env
+COPY docker_requirements.txt .
+RUN pip install -r docker_requirements.txt
+
+
+# Activate env
+# RUN conda activate pysyft
+# RUN pip show syft
+# RUN pip show sympc
+# RUN pip show tenseal
+# RUN pip show python-dp
+
+#Copy data and code
+COPY /data /ppdm/data
+COPY /notebooks/difprivacy/dp_experiment.ipynb /ppdm/notebooks/difprivacy/dp_experiment.ipynb
+COPY /notebooks/hencryption/basic_he /ppdm/notebooks/hencryption/basic_he
+COPY /notebooks/smpc/encrypted_regression/smpc_regression.ipynb /ppdm/notebooks/smpc/encrypted_regression/smpc_regression.ipynb
+COPY /notebooks/smpc/cnn_braintumor/brain_tumor.ipynb /ppdm/notebooks/smpc/cnn_braintumor/brain_tumor.ipynb
+
+CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
