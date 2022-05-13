@@ -1,4 +1,38 @@
 # Applied Research on Privacy preserving and Data mining techniques
+### Project structure
+```
+    ├── data               <- Data for experiments.
+    │   ├── brain_tumor_imgs    <- Folder with data for SMPC Image Classification
+    |   |   ├── yes                 <- Folder with Images with Detected Tumor
+    |   |   └── no                  <- Folder with Images with Tumor Absence
+    |   |
+    │   ├── dp_data             <-  Folder with data for Differential Privacy Case Study        
+    |   |
+    │   └── housing_data        <- Folder with data for SMPC Linear Regression case study 
+    │
+    ├── notebooks           <- Jupyter notebooks with Source Codes
+    │   ├── difprivacy          <- Differential Privacy Case Study source code.              
+    |   |   └── dp_experiment.ipynb    
+    |   |
+    │   ├── hencryption         <- Hommomorphic Encryption Case Study source code.
+    |   |   ├── Tenseal_Syft_DO.ipynb  <-  Data Owner part.
+    |   |   └── Tenseal_Syft_DS.ipynb  <-  Data Scientist part.
+    |   |   
+    │   └── smpc
+    |       ├── cnn_braintumor        <- SMPC Image Classification case study source code.
+    |       |   └── brain_tumor.ipynb      
+    |       |   
+    |       ├── encrypted_regression  <- SMPC Linear Regression case study source code.
+    |       |   └── smpc_regression.ipynb  
+    |       | 
+    │       └── smpc_for_vector_compuations  <- SMPC Vector Operations case study source code
+    |           ├── MPCTensor-Duet-Party1-DS.ipynb <-  Data Owner part.
+    |           └── MPCTensor-Duet-Party2-D0.ipynb <-  Data Scientist part.
+    │ 
+    └── docker_requirements.txt       <- File with environment requirements
+
+```
+
 
 ### Just sample update due to system reset 13.02.2022
 ### second update

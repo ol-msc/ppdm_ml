@@ -29,7 +29,9 @@ RUN pip install -r docker_requirements.txt
 # RUN pip show python-dp
 
 #Copy data and code
-COPY /data /ppdm/data
+COPY /data/brain_tumor_imgs /ppdm/data/brain_tumor_imgs
+COPY /data/dp_data /ppdm/data/dp_data
+COPY /data/housing_data /ppdm/data/housing_data
 COPY /notebooks/difprivacy/dp_experiment.ipynb /ppdm/notebooks/difprivacy/dp_experiment.ipynb
 COPY /notebooks/hencryption/basic_he /ppdm/notebooks/hencryption/basic_he
 COPY /notebooks/smpc/encrypted_regression/smpc_regression.ipynb /ppdm/notebooks/smpc/encrypted_regression/smpc_regression.ipynb
